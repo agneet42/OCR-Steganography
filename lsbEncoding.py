@@ -7,7 +7,7 @@ import cv2
 
 # ENCODING
 
-image = skimage.io.imread('resized_C0005.png') # read image
+image = skimage.io.imread('resized_C0005.png') # read cover image
 
 file = csv.reader(open('features.csv','r')) # read feature file
 arr_encode = []
@@ -20,7 +20,7 @@ for lines in file:
 str_encode = ''
 
 for val in arr_encode:
-	str_encode = str_encode + '{0:08b}'.format(val)
+	str_encode = str_encode + '{0:08b}'.format(val) # to encode each value as a 8-bit binary number
 	# print(len(str_encode))
 
 # print(len(str_encode))
